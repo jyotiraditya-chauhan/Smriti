@@ -1,0 +1,56 @@
+{
+  "" : {
+    "const-values" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Smriti-primary.swiftconstvalues",
+    "dependencies" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Smriti-primary.d",
+    "diagnostics" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Smriti-primary.dia",
+    "emit-module-dependencies" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Smriti-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Smriti-primary-emit-module.dia",
+    "pch" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Smriti-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Smriti-primary.swiftdeps"
+  },
+  "/Users/adityachauhan/Downloads/XCode/Smriti/Smriti/Config/Constants/AppImages.swift" : {
+    "index-unit-output-path" : "/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/AppImages.o",
+    "llvm-bc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/AppImages.bc",
+    "object" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/AppImages.o"
+  },
+  "/Users/adityachauhan/Downloads/XCode/Smriti/Smriti/Config/Entities/Letter.swift" : {
+    "index-unit-output-path" : "/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Letter.o",
+    "llvm-bc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Letter.bc",
+    "object" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/Letter.o"
+  },
+  "/Users/adityachauhan/Downloads/XCode/Smriti/Smriti/Core/Home/Views/HomeView.swift" : {
+    "index-unit-output-path" : "/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/HomeView.o",
+    "llvm-bc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/HomeView.bc",
+    "object" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/HomeView.o"
+  },
+  "/Users/adityachauhan/Downloads/XCode/Smriti/Smriti/Core/Home/Views/LetterDetailView.swift" : {
+    "index-unit-output-path" : "/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/LetterDetailView.o",
+    "llvm-bc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/LetterDetailView.bc",
+    "object" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/LetterDetailView.o"
+  },
+  "/Users/adityachauhan/Downloads/XCode/Smriti/Smriti/Core/Home/Widgets/LetterCardView.swift" : {
+    "index-unit-output-path" : "/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/LetterCardView.o",
+    "llvm-bc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/LetterCardView.bc",
+    "object" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/LetterCardView.o"
+  },
+  "/Users/adityachauhan/Downloads/XCode/Smriti/Smriti/Core/Home/Widgets/NewLetterView.swift" : {
+    "index-unit-output-path" : "/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/NewLetterView.o",
+    "llvm-bc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/NewLetterView.bc",
+    "object" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/NewLetterView.o"
+  },
+  "/Users/adityachauhan/Downloads/XCode/Smriti/Smriti/MainApp.swift" : {
+    "index-unit-output-path" : "/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/MainApp.o",
+    "llvm-bc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/MainApp.bc",
+    "object" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/MainApp.o"
+  },
+  "/Users/adityachauhan/Downloads/XCode/Smriti/Smriti/SmritiApp.swift" : {
+    "index-unit-output-path" : "/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/SmritiApp.o",
+    "llvm-bc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/SmritiApp.bc",
+    "object" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/SmritiApp.o"
+  },
+  "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/x86_64/GeneratedAssetSymbols.o"
+  }
+}

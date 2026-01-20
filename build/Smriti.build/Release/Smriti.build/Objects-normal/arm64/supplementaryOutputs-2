@@ -1,0 +1,12 @@
+{
+  "/Users/adityachauhan/Downloads/XCode/Smriti/Smriti/Config/Constants/AppImages.swift" : {
+    "abi-baseline-json" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/arm64/Smriti.abi.json",
+    "const-values" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/arm64/Smriti-primary.swiftconstvalues",
+    "dependencies" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/arm64/Smriti-primary.d",
+    "diagnostics" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/arm64/Smriti-primary.dia",
+    "objc-header" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/arm64/Smriti-Swift.h",
+    "swiftdoc" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/arm64/Smriti.swiftdoc",
+    "swiftmodule" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/arm64/Smriti.swiftmodule",
+    "swiftsourceinfo" : "/Users/adityachauhan/Downloads/XCode/Smriti/build/Smriti.build/Release/Smriti.build/Objects-normal/arm64/Smriti.swiftsourceinfo"
+  }
+}
