@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SmritiApp: App {
     var body: some Scene {
         WindowGroup {
                 MainApp()
-        }
+        }.modelContainer(for: Letter.self)
     }
 }
 

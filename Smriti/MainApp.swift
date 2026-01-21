@@ -12,6 +12,7 @@ import AVKit
 struct MainApp: View {
     @State private var path = NavigationPath()
     @State private var player: AVPlayer?
+    @State private var LogoPlayer: AVPlayer?
     @State private var transitionOpacity: Double = 0.0
 
     var body: some View {
@@ -55,26 +56,47 @@ struct MainApp: View {
                 
                 
                 VStack( spacing: 12) {
-                    Spacer()
+                    HStack{
+                        VStack(alignment: .leading) {
+//                            Image("logo").resizable().frame(width: 120,height: 120).cornerRadius(3000)
+                            if let logoPlayer = LogoPlayer {
+                                VideoPlayer(player: logoPlayer)
+                                    .frame(width: 120, height: 120)
+                                    .scaleEffect(2)
+                                    .clipShape(Circle())
+                                    .overlay(
+                                        Circle().stroke(Color.white.opacity(0.15), lineWidth: 1)
+                                    )
+                                    .shadow(color: .black.opacity(0.6), radius: 10)
+                                    .allowsHitTesting(false)
+                            }
+
+                                Text("Smriti")
+                                    .font(.largeTitle.bold())
+                                    .foregroundColor(.white).padding(.leading, 10)
+
+                            
+                        }.padding(.trailing, 200)
                     
-                    Image("logo").resizable().frame(width: 60,height: 60).cornerRadius(3000)
-                    
-                        Text("Smriti")
-                            .font(.largeTitle.bold())
-                            .foregroundColor(.white)
-                        
-                        Text("Inner peace begins here")
-                            .font(.subheadline)
-                            .foregroundColor(.white.opacity(0.85))
-                
+                    }
                     Spacer()
+                    Text("A quiet space for reflection, remembrance, and inner stillness")
+                        .font(.system(size: 14, weight: .semibold,design: .rounded))
+                        .foregroundColor(.white.opacity(0.85))
+                        .multilineTextAlignment(.center)
+                        .lineSpacing(4)
+                        .padding(.horizontal, 32)
+                        .padding(.bottom, 20).frame(width: 300)
+
                     NavigationLink(destination:     HomeView(path:  $path)){
                         AnimatedGradientButton().padding(.bottom, 60)
                     }
                 }
             }
+            
             .onAppear {
                 setupLoopingVideoWithFade()
+                setupLoopingVideoWithFadeForLogo()
             }
             .onDisappear {
                 removeObserver()
@@ -106,6 +128,26 @@ struct MainApp: View {
                     transitionOpacity = 0.0
                 }
             }
+        }
+    }
+    
+    private func setupLoopingVideoWithFadeForLogo() {
+        guard let url = videoURLFromAssets(named: "logo_video", withExtension: "mp4") else { return }
+
+        let avPlayer = AVPlayer(url: url)
+        avPlayer.isMuted = true
+        avPlayer.actionAtItemEnd = .none
+
+        LogoPlayer = avPlayer
+        avPlayer.play()
+
+        NotificationCenter.default.addObserver(
+            forName: .AVPlayerItemDidPlayToEndTime,
+            object: avPlayer.currentItem,
+            queue: .main
+        ) { _ in
+            avPlayer.seek(to: .zero)
+            avPlayer.play()
         }
     }
 

@@ -4,43 +4,17 @@
 //
 //  Created by Aditya Chauhan on 19/01/26.
 //
+
 import SwiftUI
+import _SwiftData_SwiftUI
 
 struct HomeView: View {
-    
-    let letters = [
-        Letter(
-            name: "Aditya Chauhan",
-            profession: "iOS Developer",
-            goal: "I hope you are doing well and have finally built that dream app...",
-            targetDate: Calendar.current.date(byAdding: .year, value: 20, to: Date())!,
-            createdAt: Date(),
-            letter: nil
-        ),
-        Letter(
-            name: "Aditya Chauhan",
-            profession: "Junior Designer",
-            goal: "Remember why you started: to make technology accessible...",
-            targetDate: Calendar.current.date(byAdding: .year, value: 5, to: Date())!,
-            createdAt: Date().addingTimeInterval(-86400 * 3),
-            letter: nil
-        ),
-        Letter(
-            name: "Aditya Chauhan",
-            profession: "Intern",
-            goal: "Today was overwhelming but I learned so much about...",
-            targetDate: Date().addingTimeInterval(-86400),
-            createdAt: Date().addingTimeInterval(-86400 * 10),
-            letter: nil
-        )
-    ]
-    
+    @Query(sort: \Letter.createdAt, order: .reverse)
+    private var letters: [Letter]
     @State private var showAddSheet: Bool = false
     @Binding var path: NavigationPath
-
+    @State private var selectedLetter: Letter?
     var body: some View {
-        
-
             ZStack {
                 Image("background_image")
                     .resizable()
@@ -52,7 +26,11 @@ struct HomeView: View {
                 ScrollView {
                     VStack(spacing: 20) {
                         ForEach(letters) { letter in
-                            LetterCardView(letter: letter)
+                            LetterCardView(letter: letter).onTapGesture {
+                                
+                                selectedLetter = letter
+                            }
+
                         }
                     }
                     .padding(.horizontal, 20)
@@ -65,21 +43,46 @@ struct HomeView: View {
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: { showAddSheet = true }) {
-                        Image(systemName: "plus")
-                            .font(.system(size: 16, weight: .bold))
-                            .foregroundColor(.black)
-                            .frame(width: 32, height: 32)
-                            .background(Color.white)
-                            .clipShape(Circle())
-                    }
-                }
-            }
-            .sheet(isPresented: $showAddSheet) {
-                NavigationStack{
-                    NewLetterView(path: $path)
-                }
-            }
+                      ToolbarItem(placement: .topBarTrailing) {
+                          Button {
+                              showAddSheet = true
+                          } label: {
+                              Image(systemName: "plus")
+                                  .font(.system(size: 16, weight: .bold))
+                                  .foregroundStyle(.white)
+                                  .frame(width: 32, height: 32)
+                                  .background(.ultraThinMaterial)
+                                  .clipShape(Circle())
+                          }
+                      }
+                  }
+                  
+                  .sheet(isPresented: $showAddSheet) {
+                      NavigationStack {
+                          NewLetterView(path: $path)
+                      }
+                      .preferredColorScheme(.dark)
+                      .presentationDetents([.medium, .large])
+                      .presentationCornerRadius(28)
+                      .presentationBackground(.clear)
+                      .background {
+                          GlassSheetBackground()
+                              .ignoresSafeArea()
+                      }
+                  }
+                  .sheet(item: $selectedLetter) { letter in
+                      LetterDetailView(letter: letter)
+                          .preferredColorScheme(.dark)
+                          .presentationDetents([.medium, .large])
+                          .presentationCornerRadius(28)
+                          .presentationDragIndicator(.visible)
+                          .presentationBackground(.clear)
+                          .background {
+                              GlassSheetBackground()
+                                  .ignoresSafeArea()
+                          }
+                  }
+
     }
 }
+
